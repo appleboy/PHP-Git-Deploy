@@ -15,5 +15,5 @@
  
 $config['git_path'] = '/usr/local/bin/git';
 $config['github'] = array(
-    'master' => array('base_path' => '/home/git/Shell-Script/')
+    'master' => array('base_path' => '/usr/home/git/Shell-Script/')
 ); 

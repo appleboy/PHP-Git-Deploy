@@ -29,14 +29,13 @@ class Deploy extends CI_Controller
      */
     public function receive()
     {
-        // git payload
-        // ref: https://help.github.com/articles/post-receive-hooks
+        // receive git payload
         $payload = $this->input->get_post('payload');
         // load git command path config
         $git_config = $this->config->item('github');
         $git_path = $this->config->item('git_path');
 
-        if ($payload and is_array($config)) {
+        if ($payload and is_array($git_config)) {
             $payload = json_decode($payload);
 
             log_message('debug', 'Post-receive hook initial');

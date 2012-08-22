@@ -10,7 +10,9 @@
  */
  
 /**
- *
+ * github config
+ * 
+ * git command path   
  */
  
 $config['git_path'] = '/usr/local/bin/git';

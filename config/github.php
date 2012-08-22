@@ -8,14 +8,16 @@
  * @link        https://github.com/appleboy/CodeIgniter-Git-Deploy
  * @since       Version 1.0
  */
- 
+
 /**
  * github config
- * 
- * git command path   
+ *
+ * git command path
  */
- 
+
 $config['git_path'] = '/usr/local/bin/git';
 $config['github'] = array(
-    'master' => array('base_path' => '/usr/home/git/Shell-Script/')
-); 
+    'shell-script' => array('master' => array('base_path' => '/usr/home/git/Shell-Script/')),
+    'config'       => array('master' => array('base_path' => '/home/git/config/')),
+    'codeIgniter-git-deploy' => array('master' => array('base_path' => '/home/git/test/CodeIgniter-Git-Deploy/')),
+);

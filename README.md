@@ -1,8 +1,6 @@
 CodeIgniter-Git-Deploy
 ======================
 
-[![Build Status](https://secure.travis-ci.org/appleboy/CodeIgniter-Git-Deploy.png?branch=master)](http://travis-ci.org/appleboy/CodeIgniter-Git-Deploy)
-
 Using `Post-Receive Hooks` to deploy muliple projects with CodeIgniter automatically.
 
 Ref: https://help.github.com/articles/post-receive-hooks

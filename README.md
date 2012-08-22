@@ -3,7 +3,7 @@ CodeIgniter-Git-Deploy
 
 [![Build Status](https://secure.travis-ci.org/appleboy/CodeIgniter-Git-Deploy.png?branch=master)](http://travis-ci.org/appleboy/CodeIgniter-Git-Deploy)
 
-Using Post-Receive Hooks to deploy your muliple projects automatically.
+Using `Post-Receive Hooks` to deploy muliple projects with CodeIgniter automatically.
 
 Ref: https://help.github.com/articles/post-receive-hooks
 
@@ -68,7 +68,7 @@ array(
 Setting Webhook URL
 ----------------------
 
-Please refer the [Post-Receive Hooks Helper](https://help.github.com/articles/post-receive-hooks)
+Please refer the [Post-Receive Hooks Helper](https://help.github.com/articles/post-receive-hooks) page
 
 ![Webhook](http://farm8.staticflickr.com/7115/7836097364_d7629b427c_z.jpg "Webhook")
 

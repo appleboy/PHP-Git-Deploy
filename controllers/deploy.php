@@ -42,14 +42,14 @@ class Deploy extends CI_Controller
 
             foreach ($git_config as $key => $val) {
 
-                // check repository name
+                // check repository name exist in config
                 $repository_name = strtolower($payload->repository->name);
                 if ($repository_name != strtolower($key)) {
                     continue;
                 }
 
                 foreach ($val as $k => $v) {
-                    // check payload ref branch
+                    // check if match payload ref branch
                     $head = 'refs/heads/' . $k;
                     if ($payload->ref != $head) {
                         continue;

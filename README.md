@@ -1,4 +1,6 @@
 CodeIgniter-Git-Deploy
 ======================
 
-Git Deployment with CodeIgniter
+Using Post-Receive Hooks to deploy your muliple projects automatically.
+
+Ref: https://help.github.com/articles/post-receive-hooks

@@ -57,18 +57,20 @@ class Deploy extends CI_Controller
 
                     // git reset head and pull origin branch
                     if (isset($v['base_path']) and !empty($v['base_path'])) {
+                        $base_path = realpath($v['base_path']) . '/';
+
                         $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" reset --hard HEAD',
-                            $git_path, $v['base_path'], $v['base_path']);
+                            $git_path, $base_path, $base_path);
                         log_message('debug', '$shell value ' . $shell);
                         $output = shell_exec(escapeshellcmd($shell));
 
                         $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" clean -f',
-                            $git_path, $v['base_path'], $v['base_path']);
+                            $git_path, $base_path, $base_path);
                         log_message('debug', '$shell value ' . $shell);
                         $output = shell_exec(escapeshellcmd($shell));
 
                         $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" pull origin %s',
-                            $git_path, $v['base_path'], $v['base_path'], $k);
+                            $git_path, $base_path, $base_path, $k);
                         log_message('debug', '$shell value ' . $shell);
                         $output = shell_exec(escapeshellcmd($shell));
                     }

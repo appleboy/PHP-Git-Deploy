@@ -31,9 +31,9 @@ $config['github'] = array(
 
 `project_name` must be the same with your github project name, for example:
 
-Your github project URL is https://github.com/appleboy/CodeIgniter-Git-Deploy
+Your github project URL is https://github.com/appleboy/PHP-Git-Deploy
 
-The `project_name` value is `CodeIgniter-Git-Deploy`, don't case sensitive.
+The `project_name` value is `PHP-Git-Deploy`, don't case sensitive.
 
 Please refer the following example profiles.
 

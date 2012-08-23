@@ -5,7 +5,7 @@
  *
  * @author      appleboy
  * @copyright   2012 appleboy
- * @link        https://github.com/appleboy/CodeIgniter-Git-Deploy
+ * @link        https://github.com/appleboy/PHP-Git-Deploy
  * @package     CodeIgniter Git Deploy
  */
 class Deploy extends CI_Controller

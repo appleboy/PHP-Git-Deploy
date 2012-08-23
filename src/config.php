@@ -1,7 +1,7 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
 
 /**
- * @package     CodeIgniter Git Deploy
+ * @package     PHP Git Deploy
  * @author      Bo-Yi Wu
  * @copyright   Copyright (c) 2012, Bo-Yi Wu
  * @link        https://github.com/appleboy/PHP-Git-Deploy

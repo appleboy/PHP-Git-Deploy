@@ -1,7 +1,7 @@
-CodeIgniter-Git-Deploy
+PHP-Git-Deploy
 ======================
 
-Using `Post-Receive Hooks` to deploy muliple projects with CodeIgniter automatically.
+Using `Post-Receive Hooks` to deploy muliple projects automatically.
 
 Ref: https://help.github.com/articles/post-receive-hooks
 
@@ -13,8 +13,8 @@ Download files
 
 Download and drag the following files into your `application/` folder.
 
-    $ cp config/github.php application/config/
-    $ cp controllers/deploy.php application/controllers/
+    $ cp src/config.php your_www/
+    $ cp src/deploy.php your_www/
 
 Configure your profile
 ----------------------

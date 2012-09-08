@@ -8,17 +8,17 @@
  * @link        https://github.com/appleboy/PHP-Git-Deploy
  * @package     PHP Git Deploy
  */
- 
+
 // include config file
 include('config.php');
 
 // check git config
-(isset($git_config)) and $git_config = $config['github'];
-(isset($git_path)) and $git_path = $config['git_path'];
+(!isset($git_config)) and $git_config = $config['github'];
+(!isset($git_path)) and $git_path = $config['git_path'];
 
 if (isset($_POST['payload']) and !empty($_POST['payload']) and is_array($git_config)) {
     $payload = json_decode($_POST['payload']);
-    
+
     foreach ($git_config as $key => $val) {
         // check repository name exist in config
         $repository_name = strtolower($payload->repository->name);
@@ -39,20 +39,17 @@ if (isset($_POST['payload']) and !empty($_POST['payload']) and is_array($git_con
 
                 $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" reset --hard HEAD',
                     $git_path, $base_path, $base_path);
-                log_message('debug', '$shell value ' . $shell);
                 $output = shell_exec(escapeshellcmd($shell));
 
                 $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" clean -f',
                     $git_path, $base_path, $base_path);
-                log_message('debug', '$shell value ' . $shell);
                 $output = shell_exec(escapeshellcmd($shell));
 
                 $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" pull origin %s',
                     $git_path, $base_path, $base_path, $k);
-                log_message('debug', '$shell value ' . $shell);
                 $output = shell_exec(escapeshellcmd($shell));
             }
         }
-    }    
+    }
 }
 

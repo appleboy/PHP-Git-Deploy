@@ -1,4 +1,15 @@
 language: php
 php:
+  # aliased to a recent 5.3.x version
   - 5.3
+  # aliased to a recent 5.4.x version
   - 5.4
+  
+env:
+  - DB=mysql
+  
+before_script:
+  - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS test;" -uroot; fi
+  
+# omitting "script:" will default to phpunit
+script: phpunit --configuration phpunit_$DB.xml --coverage-text

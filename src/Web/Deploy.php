@@ -71,12 +71,12 @@ class Deploy
                 }
             }
         }
-        echo 'Compeletly';    
+        return 'Compeletly';    
     }
 
     public function hello()
     {
-        echo 'Hello World';
+        return 'Hello World';
     }
 }
 

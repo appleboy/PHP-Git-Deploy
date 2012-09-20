@@ -80,4 +80,5 @@ class Deploy
     }
 }
 
-\Web\Deploy::index();
+//$deploy = new \Web\Deploy;
+//$deploy->index();

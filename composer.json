@@ -1,2 +1,18 @@
 {
+    "name": "appleboy/PHP-Git-Deploy",
+    "description": "Git Deployment with PHP",
+    "keywords": ["php", "deploy"],
+    "homepage": "https://github.com/appleboy/PHP-Git-Deploy",
+    "type": "library",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Bo-Yi Wu",
+            "email": "appleboy.tw@gmail.com",
+            "homepage": "http://blog.wu-boy.com/"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Assetic": "src/" }
+    }
 }

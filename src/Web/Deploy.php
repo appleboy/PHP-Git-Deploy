@@ -29,7 +29,7 @@ class Deploy
         $this->config = $config;
     }
     
-    public static function index()
+    public function index()
     {
         // check git config
         (!isset($git_config)) and $git_config = $this->config['github'];
@@ -74,7 +74,7 @@ class Deploy
         echo 'Compeletly';    
     }
 
-    public static function hello()
+    public function hello()
     {
         echo 'Hello World';
     }

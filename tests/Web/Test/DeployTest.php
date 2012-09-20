@@ -10,6 +10,12 @@ class DeployTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->deploy = new Deploy();
+        
+        $payload = array(
+            'repository' => array('name' => 'test'),
+            'ref' => 'master'    
+        );
+        $_POST['payload'] = json_encode($payload);
     }
     
     public function testindex()

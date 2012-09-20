@@ -56,7 +56,8 @@ class Deploy
                     }
                 }
             }
-        }    
+        }
+        echo 'Compeletly';    
     }
 
     public static function hello()

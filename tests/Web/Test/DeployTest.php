@@ -10,11 +10,15 @@ class DeployTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->deploy = new Deploy();
-        echo $this->deploy->hello();
     }
 
-    public function testHelloWorld()
+    public function testhello()
     {
-        $this->assertEquals('Hello World', 'Hello World');
+        $this->assertEquals('Hello World', $this->deploy->hello());
+    }
+    
+    public function testindex()
+    {
+        $this->assertEquals('Compeletly', $this->deploy->index());
     }
 }

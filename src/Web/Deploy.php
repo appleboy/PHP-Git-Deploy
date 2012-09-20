@@ -10,6 +10,9 @@
  */
 namespace Web;
 
+// include config file
+include('config.php');
+
 class Deploy
 {
     
@@ -17,8 +20,7 @@ class Deploy
 
     public function __construct()
     {
-        // include config file
-        include('config.php');
+        global $config; 
         $this->config = $config;
     }
     

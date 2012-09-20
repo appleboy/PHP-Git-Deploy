@@ -9,6 +9,8 @@ env:
   - DB=mysql
   
 before_script:
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS test;" -uroot; fi
   
 # omitting "script:" will default to phpunit

@@ -7,7 +7,8 @@ $dir = realpath(dirname(__FILE__));
 
 function loader($class)
 {
-    $file = $class . '.php';
+    $file = '.src/' . $class . '.php';
+    echo $file . ' xxxxxxxxxxxxxxx'; 
     if (file_exists($file)) {
         require $file;
     }

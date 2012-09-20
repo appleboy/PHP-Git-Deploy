@@ -64,17 +64,14 @@ class Deploy
     
                     $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" reset --hard HEAD',
                         $git_path, $base_path, $base_path);
-                    echo $shell;
                     $output = shell_exec(escapeshellcmd($shell));
     
                     $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" clean -f',
                         $git_path, $base_path, $base_path);
-                    echo $shell;
                     $output = shell_exec(escapeshellcmd($shell));
     
                     $shell = sprintf('%s --git-dir="%s.git" --work-tree="%s" pull origin %s',
                         $git_path, $base_path, $base_path, $k);
-                    echo $shell;
                     $output = shell_exec(escapeshellcmd($shell));
                 }
             }
@@ -82,6 +79,3 @@ class Deploy
         return true;    
     }
 }
-
-//$deploy = new \Web\Deploy;
-//$deploy->index();

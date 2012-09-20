@@ -10,9 +10,6 @@
  */
 namespace Web;
 
-// include config file
-include('config.php');
-
 class Deploy
 {
     
@@ -20,7 +17,8 @@ class Deploy
 
     public function __construct()
     {
-        global $config; 
+        // include config file
+        include('config.php'); 
         $this->config = $config;
     }
     
@@ -71,12 +69,7 @@ class Deploy
                 }
             }
         }
-        return 'Compeletly';    
-    }
-
-    public function hello()
-    {
-        return 'Hello World';
+        return true;    
     }
 }
 

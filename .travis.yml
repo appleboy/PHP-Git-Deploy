@@ -1,7 +1,5 @@
 language: php
 php:
-  # aliased to a recent 5.2.x version
-  - 5.2
   # aliased to a recent 5.3.x version
   - 5.3
   # aliased to a recent 5.4.x version

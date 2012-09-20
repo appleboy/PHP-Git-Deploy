@@ -1,7 +1,7 @@
 PHP-Git-Deploy
 ======================
 
-Using `Post-Receive Hooks` to deploy muliple projects automatically.
+Using `Post-Receive Hooks` to deploy muliple projects automatically. [![Build Status](https://secure.travis-ci.org/appleboy/PHP-Git-Deploy.png)](http://travis-ci.org/appleboy/PHP-Git-Deploy)
 
 Ref: https://help.github.com/articles/post-receive-hooks
 
@@ -13,13 +13,12 @@ Download files
 
 Download and drag the following files into your `application/` folder.
 
-    $ cp src/config.php your_www/
-    $ cp src/deploy.php your_www/
+    $ cp -r src/Web your_www/
 
 Configure your profile
 ----------------------
 
-open `application/config/github.php` file with your editor. Following is config formats.
+open `src/Web/config.php` file with your editor. Following is config formats.
 
 ```php
 $config['github'] = array(
@@ -61,6 +60,18 @@ array(
         'develop' => array('base_path' => '/path/CodeIgniter-MY-Model_2/')
     )
 );
+```
+
+Create New index.php
+----------------------
+
+Create new file `your_www/Web/index.php`, copy the following source code and paste into index.php file.
+
+```php
+<?php
+require_once('Deplpoy.php');
+$deploy = new \Web\Deploy;
+$deploy->index();
 ```
 
 Setting Webhook URL

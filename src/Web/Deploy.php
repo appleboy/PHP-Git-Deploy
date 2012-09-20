@@ -10,16 +10,28 @@
  */
 namespace Web;
 
-// include config file
-include('config.php');
-
 class Deploy
 {
+    
+    public $config = array();
+
+    public function __construct()
+    {
+        // include config file
+        include('config.php');
+        $this->config = $config;
+    }
+    
+    public function set_config($config = array())
+    {
+        $this->config = $config;
+    }
+    
     public static function index()
     {
         // check git config
-        (!isset($git_config)) and $git_config = $config['github'];
-        (!isset($git_path)) and $git_path = $config['git_path'];
+        (!isset($git_config)) and $git_config = $this->config['github'];
+        (!isset($git_path)) and $git_path = $this->config['git_path'];
         
         if (isset($_POST['payload']) and !empty($_POST['payload']) and is_array($git_config)) {
             $payload = json_decode($_POST['payload']);

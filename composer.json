@@ -13,6 +13,6 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Assetic": "src/" }
+        "psr-0": { "Web": "src/" }
     }
 }

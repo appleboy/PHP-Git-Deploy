@@ -5,6 +5,32 @@ Using `Post-Receive Hooks` to deploy muliple projects automatically. [![Build St
 
 Ref: https://help.github.com/articles/post-receive-hooks
 
+Requirements
+======================
+
+PHP-Git-Deploy works with PHP 5.3 or later.
+
+Installation via Composer
+======================
+
+Create a composer.json file in your project root and use it to define simply your dependencies:
+
+```
+{
+    "require": {
+        "appleboy/php-git-deploy": "1.0.*"
+    }
+}
+```
+
+Then install Composer in your project (or download the composer.phar directly):
+
+    $ curl -s http://getcomposer.org/installer | php
+
+And finally ask Composer to install the dependencies:
+
+    $ php composer.phar install
+
 Installation/Usage
 ======================
 

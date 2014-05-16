@@ -3,7 +3,7 @@ PHP-Git-Deploy
 
 Using `Post-Receive Hooks` to deploy muliple projects automatically. [![Build Status](https://secure.travis-ci.org/appleboy/PHP-Git-Deploy.png)](http://travis-ci.org/appleboy/PHP-Git-Deploy)
 
-Ref: https://help.github.com/articles/post-receive-hooks
+Ref: https://developer.github.com/webhooks/
 
 Requirements
 ======================
